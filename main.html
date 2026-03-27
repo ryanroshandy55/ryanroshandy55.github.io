@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perhitungan Kalkulator Bunga Simple</title>
+    <title>Simple Interest Loan Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
                 <h2>Kalkulator Cicilan Flat (Pinjaman)</h2>
                 
                 <label for="">Pokok Pinjaman (Rp):</label>
-                <input type="number" id="pokok" placeholder="contoh: 10000000">
+                <input type="text" id="pokok" oninput="formatInputRupiah(this)" placeholder="contoh: 10000000">
                 
                 <label for="">Bunga per Tahun (p.a):</label>
                 <input type="number" id="bunga" step="0.1" placeholder="contoh: 3.0">
@@ -25,6 +25,8 @@
                 <button onclick="hitungCicilan()">Hitung Cicilan</button>
                 
                 <div id="hasil" class="result-box display-none">
+                    <p>Total Pinjaman: <strong id="resPinjaman"></strong></p>
+                    <hr>
                     <p>Total Bunga: <strong id="resBunga"></strong></p>
                     <p>Total Bayar: <strong id="resTotal"></strong></p>
                     <hr>
