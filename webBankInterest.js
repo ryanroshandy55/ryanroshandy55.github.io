@@ -13,7 +13,6 @@ function bersihAngka(string) {
 }
 
 function hitungCicilan() {
-    formatInputRupiah(P);
     const P = bersihAngka(document.getElementById('pokok').value)
     const rateAnnually = parseFloat(document.getElementById('bunga').value / 100)
     const n = parseInt(document.getElementById('bulan').value);
@@ -29,6 +28,7 @@ function hitungCicilan() {
     const totalBayar = P + totalBunga;
     const cicilanPerBulan = totalBayar/n;
 
+    document.getElementById('resPinjaman').innerText = formatRupiah(P);
     document.getElementById('resBunga').innerText = formatRupiah(totalBunga);
     document.getElementById('resTotal').innerText = formatRupiah(totalBayar);
     document.getElementById('resBulanan').innerText = formatRupiah(cicilanPerBulan);
@@ -47,6 +47,7 @@ function dapatkanRate(nominal) {
         return 3.0
     }
 }
+
 function updateBungaOtomatis(element) {
     formatInputRupiah(element)
     let cursorPosition = element.selectionStart;
