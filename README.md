@@ -1,4 +1,4 @@
-# [ryanroshandy55.github.io/loan/calculator](https://ryanroshandy55.github.io/loan-calculator/)
+# [Link go to the web](https://ryanroshandy55.github.io/loan-calculator/)
 I learning to build a simple website build using plain HTML, CSS and JavaScript. 
 
 ## Description
